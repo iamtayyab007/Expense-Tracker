@@ -7,8 +7,10 @@ export const TotalBalance = () => {
   return (
     <>
       <div style={{ display: value ? "none" : "block" }}>
-        <div className="text-3xl">Total Balance is: ${totalBalance}</div>
-        <div className="flex flex-col bg-slate-200 text-2xl m-3 px-40">
+        <div className="text-3xl sm: m-7">
+          Total Balance is: ${totalBalance}
+        </div>
+        <div className="flex flex-col bg-slate-200 text-2xl m-3 px-40 sm: px-11">
           <h1>${totalIncome}</h1>
           <p>Total Income</p>
         </div>

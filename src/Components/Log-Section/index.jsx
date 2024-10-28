@@ -7,19 +7,19 @@ export const LogSection = () => {
   return (
     <>
       <div
-        className="w-full flex flex-row mt-11 gap-7 h-auto"
+        className="w-full flex lg:flex-row mt-11 gap-7 h-auto sm: flex-col"
         style={{ display: value ? "none" : "flex" }}
       >
-        <div className="w-2/4 bg-slate-100 rounded-xl p-2">
+        <div className="lg:w-2/4 bg-slate-100 rounded-xl p-2 sm: w-auto">
           Expense
-          <div className="m-7 p-2 rounded">
+          <div className="m-7 p-2 rounded sm: w-auto">
             {transactions &&
               transactions.length > 0 &&
               transactions.map((transaction, index) =>
                 transaction.transactionType === "expense" ? (
                   <div
                     key={index}
-                    className="flex flex-row justify-between items-center border-2 border-red-400 p-2 rounded bg-red-200 m-3"
+                    className="flex flex-row justify-between items-center border-2 border-red-400 p-2 rounded bg-red-200 m-3 sm: gap-4"
                   >
                     <span>{transaction.description}</span>
                     <span>${transaction.amount}</span>
@@ -30,16 +30,16 @@ export const LogSection = () => {
               )}
           </div>
         </div>
-        <div className="w-2/4 bg-slate-100 rounded-xl p-2">
+        <div className="lg:w-2/4 bg-slate-100 rounded-xl p-2 sm: w-auto">
           Income
-          <div className="m-7 p-2 rounded">
+          <div className="m-7 p-2 rounded sm: w-auto">
             {transactions &&
               transactions.length > 0 &&
               transactions.map((transaction, index) =>
                 transaction.transactionType === "income" ? (
                   <div
                     key={index}
-                    className="flex flex-row justify-between items-center border-2 border-blue-400 p-2 rounded bg-blue-200 m-3"
+                    className="flex flex-row justify-between items-center border-2 border-blue-400 p-2 rounded bg-blue-200 m-3 sm: gap-4"
                   >
                     <span>{transaction.description}</span>
                     <span>${transaction.amount}</span>

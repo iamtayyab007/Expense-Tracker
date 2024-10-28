@@ -9,7 +9,7 @@ export const Main = () => {
   const { handleAddTransaction, value, setValue } = useContext(GlobalContext);
   return (
     <div>
-      <header className="flex justify-between items-center">
+      <header className="flex justify-between items-center sm: relative sm: p-3">
         <h1 className="text-3xl font-bold text-purple-400">Expense Tracker</h1>
 
         <button
@@ -26,7 +26,7 @@ export const Main = () => {
         <Modal />
       </section>
 
-      <div className="flex justify-between items-center gap-11 h-96">
+      <div className="flex lg:flex-row sm: flex-col justify-between items-center gap-11 h-96 sm: gap-2">
         <section className="flex justify-end items-center">
           <TotalBalance />
         </section>
@@ -39,7 +39,7 @@ export const Main = () => {
         </section>
       </div>
 
-      <section>
+      <section className="sm: py-96 lg:p-3">
         <LogSection />
       </section>
     </div>
