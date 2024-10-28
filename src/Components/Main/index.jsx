@@ -26,7 +26,7 @@ export const Main = () => {
         <Modal />
       </section>
 
-      <div className="flex lg:flex-row sm: flex-col justify-between items-center gap-11 h-96 sm: gap-2">
+      <div className="flex lg:flex-row sm: flex-col justify-between items-center lg:gap-11 h-96 sm: gap-2">
         <section className="flex justify-end items-center">
           <TotalBalance />
         </section>

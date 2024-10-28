@@ -10,7 +10,7 @@ export const TotalBalance = () => {
         <div className="text-3xl sm: m-7">
           Total Balance is: ${totalBalance}
         </div>
-        <div className="flex flex-col bg-slate-200 text-2xl m-3 px-40 sm: px-11">
+        <div className="flex flex-col bg-slate-200 text-2xl m-3 lg:px-40 sm: px-11">
           <h1>${totalIncome}</h1>
           <p>Total Income</p>
         </div>
