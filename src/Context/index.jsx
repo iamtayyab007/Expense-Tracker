@@ -6,6 +6,17 @@ export default function GlobalState({ children }) {
   const [transactionType, setTransactionType] = useState("income");
   const [input, setInput] = useState({ description: "", amount: 0 });
   const [transactions, setTransactions] = useState([]);
+  useEffect(() => {
+    const storedTransactions = localStorage.getItem("transactions");
+    if (storedTransactions) {
+      setTransactions(JSON.parse(storedTransactions));
+    }
+  }, []);
+
+  // Save transactions to localStorage whenever the transactions state changes
+  useEffect(() => {
+    localStorage.setItem("transactions", JSON.stringify(transactions));
+  }, [transactions]);
 
   function handleSubmit(e) {
     e.preventDefault();
